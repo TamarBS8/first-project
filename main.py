@@ -1,10 +1,10 @@
-# First_Screen
 import coin
 import ils
 import usd
 from ils import ILS
 from usd import USD
 
+# First Screen
 print('Welcome to currency converter')
 
 def get_user_input(prompt, valid_input):
@@ -34,6 +34,7 @@ while user_input != 'N' and user_input != 'n':
     print('Please choose an option (1/2)')
     print('1. Dollars to Shekels \n2. Shekels to Dollars')
 
+# Second Screen
     user_input = get_user_input('Your Choice: ', ['1', '2'])
     coin = None
     if user_input == '1':
@@ -42,10 +43,12 @@ while user_input != 'N' and user_input != 'n':
         coin = ILS()
     value_to_convert = get_float_user_input('please enter an amount to convert: ')
     result = coin.calculate(value_to_convert)
+
+ # Third Screen
     print('Result: ' + str(result))
     results.append(result)
     user_input = get_user_input('Do you want to convert again? (Y / N)', ['Y', 'y', 'N', 'n'])
-
+# Fourth Screen
 print('Thanks for using our currency converter')
 print('Conversions: ')
 for result in results:
