@@ -9,6 +9,7 @@ from eur import EUR
 # First Screen
 print('Welcome to currency converter')
 
+# the function is responsible for a text input from the user, until the input is valid.
 def get_user_input(prompt, valid_input):
     user_input = None
     while user_input not in valid_input:
@@ -17,6 +18,7 @@ def get_user_input(prompt, valid_input):
             print('Invalid Choice, please try again')
     return user_input
 
+# the function is responsible for a float input from the user, until the input is valid.
 def get_float_user_input(prompt):
     user_input = None
     valid_input = False
